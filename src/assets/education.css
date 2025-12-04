@@ -1,0 +1,12 @@
+.center-line {
+  width: 4px;
+  height: 0; /* awalnya tidak terlihat */
+  background: #0ea5e9; 
+  margin: 0 auto;
+  transition: height 1s ease-in-out;
+}
+
+/* ketika aktif */
+.center-line.active {
+  height: 300px; /* atur tinggi akhirnya */
+}

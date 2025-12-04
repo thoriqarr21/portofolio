@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "Title": "Contact Management",
+    "Description": "a Personal Portfolio Website engineered with React, Vite, and Tailwind CSS. This project demonstrates advanced front-end expertise through seamless animations and Dark Mode functionality, coupled with robust back-end mastery. Key features include a secure RESTful API integration, full authentication systems featuring Registration and Login, utilizing JWT (JSON Web Tokens) for stateless session management, persistent data management via MySQL Database, and a dynamic project showcase module that proves proficiency in core CRUD (Create, Read, Update, Delete) operations. This portfolio highlights the ability to deliver secure, high-performance, and aesthetically superior digital solutions.",
+    "Img": "/assets/project/contact.png",
+    "Features": [
+      "Secure RESTful API integration",
+      "Full authentication systems featuring Registration and Login",
+      "Utilizing JWT (JSON Web Tokens) for stateless session management",
+      "Persistent data management via MySQL Database",
+      "Dynamic project showcase module"
+    ],
+    "TechStack": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "JWT (JSON Web Tokens)",
+      "MySQL Database"
+    ],
+    "Github": "https://github.com/thoriqarr21/desa-app"
+  },
+  {
+    "id": 2,
+    "Title": "Sistem Informasi Desa",
+    "Description": "Digital village website for managing development projects, activity reports, and community documentation with location map features.",
+    "Img": "/assets/project/desa.png",
+    "Link": "https://desa-digital.vercel.app",
+    "Features": [
+      "Development of the RKTL website for reporting on village development activities and progress",
+      "Authentication and Role-Based Access Control (RBAC)",
+      "Annual progress analysis dashboard and project status percentage",
+      "Maps of all activities and projects using Maps",
+      "Photo/video documentation by progress (0%, 50%, 100%)",
+      "Search feature for projects and documentation"
+    ],
+    "TechStack": [
+      "Laravel Vite",
+      "Vite",
+      "MySQL",
+      "Blade",
+      "Chart.js",
+      "Leaflet.js",
+      "Spatie Permission",
+      "PHP",
+      "JavaScript",
+      "Boostrap",
+      "CSS"
+    ],
+    "Github": "https://github.com/thoriqarr21/desa-app"
+  },
+  {
+    "id": 3,
+    "Title": "Portal Berita",
+    "Description": "A modern news portal featuring a complete homepage, categories, and article details. Includes user authentication with login and registration, role-based access for admins and users, trending and latest news display, and a search feature for quick content discovery.",
+    "Img": "/assets/project/berita.png",
+
+    "Features": [
+      "Complete news portal page (homepage, categories, news details)",
+      "User authentication (Login & Registration)",
+      "Role-Based Access Control for admins and users",
+      "Displays the most popular and latest news",
+      "Has a search feature"
+    ],
+    "TechStack": [
+      "Laravel",
+      "Bootstrap",
+      "CSS",
+      "Blade Template",
+      "Eloquent ORM",
+      "MySQL",
+      "PHP",
+      "JavaScript"
+    ],
+    "Github": "https://github.com/thoriqarr21/laravel-lensa-kabar"
+  },
+  {
+    "id": 4,
+    "Title": "Notes",
+    "Description": "A simple note-taking app with a dark mode interface that allows users to create, search, and manage notes. Each note is displayed as a card with a title, content, and creation date, along with a real-time character limit for the title.",
+    "Img": "/assets/project/notes.png",
+    "Link": "https://reactshop.vercel.app",
+    "Features": [
+      "Creating notes with titles and content",
+      "Real-time title character limit",
+      "Note search feature",
+      "List of active notes displayed in cards",
+      "Display of note creation date",
+      "Data deletion and archiving feature"
+    ],
+    "TechStack": ["React", "Vite", "Tailwind", "CSS"],
+    "Github": "https://github.com/thoriqarr21/submission-react"
+  },
+  {
+    "id": 5,
+    "Title": "Restaurant App",
+    "Description": "This project was developed as a Capstone Project SIB Dicoding x MBKM 2024, in the form of a SPA and PWA based Restaurant application with a focus on accessibility, performance optimization (image & bundle), and thorough testing (integration & end-to-end) to ensure the quality and stability of the application.",
+    "Img": "/assets/project/restaurant.png",
+    "Link": "http://127.0.0.1:9002/",
+    "Features": [
+      "SPA-based Restaurant Application",
+      "Displaying restaurant data",
+      "Performance optimization (image & bundle)",
+      "Accessibility focus (A11y)",
+      "Integration & end-to-end testing"
+    ],
+    "TechStack": [
+      "Node.js",
+      "HTML",
+      "CSS",
+      "Webpack",
+      "Service Worker",
+      "IndexedDB",
+      "Jest"
+    ],
+    "Github": "https://github.com/thoriqarr21/restaurant-apps-starter-project"
+  },
+  {
+    "id": 6,
+    "Title": "Movie Catalog",
+    "Description": "Movie Catalog is a SPA and PWA-based web application that displays movie listings, with optimized performance, good accessibility, and guaranteed quality through Jest and manual testing (integration & end-to-end). This project was developed as a Capstone Project SIB Dicoding x MBKM 2024.",
+    "Img": "/assets/project/movie.png",
+    "Link": "https://eventpage.vercel.app",
+    "Features": [
+      "Single-Page Application (SPA)-based Movie Catalog",
+      "Displays movie data, descriptions, ratings, and images",
+      "Like movie feature",
+      "Search feature within movies"
+    ],
+    "TechStack": [
+      "Node.Js",
+      "HTML",
+      "CSS",
+      "Webpack",
+      "Service Worker",
+      "IndexedDB",
+      "Jest"
+    ],
+    "Github": "https://github.com/thoriqarr21/movie-catalog"
+  },
+  {
+    "id": 7,
+    "Title": "Saborama Apps",
+    "Description": "Saborama is a full-stack web application that displays a list of typical foods from all provinces in Indonesia. This application is built using Node.js and Express.js with a RESTful API architecture, and uses MySQL by Clever Cloud as the main database. All functionality is tested using Jest to ensure the quality, stability, and reliability of the application. This project was developed as a Capstone Project SIB Dicoding x MBKM 2024 with a focus on performance, a clean API structure, and efficient management of Indonesian culinary data.",
+    "Img": "/assets/project/saborama.png",
+    "Link": "https://saborama-apps.netlify.app/",
+    "Features": [
+      "The Saborama app showcases typical foods from all provinces in Indonesia",
+      "Displays a list of dishes, images, descriptions, ratings, ingredients, time, and difficulty level",
+      "Comment feature for providing feedback",
+      "Displays provincial data"
+    ],
+    "TechStack": [
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "RESTful API",
+      "Jest",
+      "JavaScript",
+      "Tailwind CSS",
+      "CSS",
+      "Webpack"
+    ],
+    "Github": "https://github.com/thoriqarr21/saborama-apps-fe"
+  },
+  {
+    "id": 8,
+    "Title": "27 Trans Tiket Booking",
+    "Description": "27 Trans Ticket Booking is an online bus ticket reservation system designed to simplify the booking process for passengers. The platform provides an easy-to-use interface for browsing routes, schedules, and seat availability, allowing users to book tickets quickly and securely.",
+    "Img": "/assets/project/27trans.png",
+    "Link": "https://eventpage.vercel.app",
+    "Features": [
+      "User-friendly homepage for browsing available bus routes",
+      "Real-time seat availability and schedule display",
+      "Ticket booking and order confirmation system",
+      "User authentication (Login & Registration)",
+      "Admin dashboard for managing routes, schedules, and bookings",
+      "Search feature for routes and departure times",
+      "Mobile-responsive UI using Bootstrap",
+      "Automatic booking code generation",
+      "Booking history for users",
+      "Printable e-ticket"
+    ],
+    "TechStack": [
+      "Codeigniter",
+      "Bootstrap",
+      "CSS",
+      "MySQL",
+      "PHP",
+      "JavaScript"
+    ],
+    "Github": "https://github.com/thoriqarr21/27trans"
+  }
+]
