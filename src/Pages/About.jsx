@@ -136,8 +136,10 @@ const AboutPage = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7] mb-4">
                 Hello, I'm
               </span>
-
-              <Shuffle
+              <h2 className="pt-2">
+                Muhammad Thoriq Ar Rasyid
+              </h2>
+              {/* <Shuffle
                 text="Muhammad Thoriq Ar Rasyid"
                 shuffleDirection="right"
                 duration={0.35}
@@ -151,7 +153,7 @@ const AboutPage = () => {
                 respectReducedMotion={true}
                 data-aos="fade-right"
                 data-aos-duration="1300"
-              />
+              /> */}
             </h2>
 
             <p
@@ -196,13 +198,18 @@ const AboutPage = () => {
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 px-2 lg:px-0 md:px-6 w-full">
               <a
-                href="https://drive.google.com/file/d/1xmOl47dTWc8eQcvm1JuJOHxNZBllVaZk/view?usp=sharing"
+                href="https://drive.google.com/file/d/1e7H4QieetyYBH-tm2Ztk01-VdtsEjr_Y/view?usp=sharing"
                 className="w-full lg:w-auto"
               >
                 <button
                   data-aos="fade-up"
                   data-aos-duration="800"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl "
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg 
+bg-gradient-to-r from-indigo-900/90 to-purple-700/60 border border-white/10
+hover:from-black/10 hover:to-white/10 hover:border border-purple-900
+text-white hover:text-[#a855f7] font-medium transition-all duration-300 
+hover:scale-105 flex items-center justify-center lg:justify-start 
+gap-2 shadow-lg hover:shadow-xl "
                 >
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                 </button>

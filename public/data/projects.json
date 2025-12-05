@@ -3,7 +3,13 @@
     "id": 1,
     "Title": "Contact Management",
     "Description": "a Personal Portfolio Website engineered with React, Vite, and Tailwind CSS. This project demonstrates advanced front-end expertise through seamless animations and Dark Mode functionality, coupled with robust back-end mastery. Key features include a secure RESTful API integration, full authentication systems featuring Registration and Login, utilizing JWT (JSON Web Tokens) for stateless session management, persistent data management via MySQL Database, and a dynamic project showcase module that proves proficiency in core CRUD (Create, Read, Update, Delete) operations. This portfolio highlights the ability to deliver secure, high-performance, and aesthetically superior digital solutions.",
-    "Img": "/assets/project/contact.png",
+    "Img": [
+      "/assets/project/contact.png",
+      "/assets/project/desa.png",
+      "/assets/project/notes.png",
+      "/assets/project/27trans.png",
+      "/assets/project/berita.png"
+      ],
     "Features": [
       "Secure RESTful API integration",
       "Full authentication systems featuring Registration and Login",
@@ -19,14 +25,13 @@
       "JWT (JSON Web Tokens)",
       "MySQL Database"
     ],
-    "Github": "https://github.com/thoriqarr21/desa-app"
+    "Github": "https://github.com/thoriqarr21/belajar-react-contact-management"
   },
   {
     "id": 2,
     "Title": "Sistem Informasi Desa",
     "Description": "Digital village website for managing development projects, activity reports, and community documentation with location map features.",
     "Img": "/assets/project/desa.png",
-    "Link": "https://desa-digital.vercel.app",
     "Features": [
       "Development of the RKTL website for reporting on village development activities and progress",
       "Authentication and Role-Based Access Control (RBAC)",
@@ -80,7 +85,7 @@
     "Title": "Notes",
     "Description": "A simple note-taking app with a dark mode interface that allows users to create, search, and manage notes. Each note is displayed as a card with a title, content, and creation date, along with a real-time character limit for the title.",
     "Img": "/assets/project/notes.png",
-    "Link": "https://reactshop.vercel.app",
+
     "Features": [
       "Creating notes with titles and content",
       "Real-time title character limit",
@@ -97,7 +102,7 @@
     "Title": "Restaurant App",
     "Description": "This project was developed as a Capstone Project SIB Dicoding x MBKM 2024, in the form of a SPA and PWA based Restaurant application with a focus on accessibility, performance optimization (image & bundle), and thorough testing (integration & end-to-end) to ensure the quality and stability of the application.",
     "Img": "/assets/project/restaurant.png",
-    "Link": "http://127.0.0.1:9002/",
+
     "Features": [
       "SPA-based Restaurant Application",
       "Displaying restaurant data",
@@ -121,7 +126,7 @@
     "Title": "Movie Catalog",
     "Description": "Movie Catalog is a SPA and PWA-based web application that displays movie listings, with optimized performance, good accessibility, and guaranteed quality through Jest and manual testing (integration & end-to-end). This project was developed as a Capstone Project SIB Dicoding x MBKM 2024.",
     "Img": "/assets/project/movie.png",
-    "Link": "https://eventpage.vercel.app",
+   
     "Features": [
       "Single-Page Application (SPA)-based Movie Catalog",
       "Displays movie data, descriptions, ratings, and images",
@@ -169,7 +174,7 @@
     "Title": "27 Trans Tiket Booking",
     "Description": "27 Trans Ticket Booking is an online bus ticket reservation system designed to simplify the booking process for passengers. The platform provides an easy-to-use interface for browsing routes, schedules, and seat availability, allowing users to book tickets quickly and securely.",
     "Img": "/assets/project/27trans.png",
-    "Link": "https://eventpage.vercel.app",
+   
     "Features": [
       "User-friendly homepage for browsing available bus routes",
       "Real-time seat availability and schedule display",

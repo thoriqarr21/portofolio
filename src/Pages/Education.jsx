@@ -7,18 +7,11 @@ import ScrambledText from "../components/ScrambledText";
 export default function Education() {
   const educData = [
     {
-      pendidikan: "Sekolah Dasar Negeri",
-      place: "SDN 06 PT Pejaten Timur",
-      tahun: "2009",
+      pendidikan: "S1 System Information",
+      place: "Bina Sarana Informatika University",
+      tahun: "2021 - 2025 | GPA: 4.0",
       description:
-        "Started my formal educational journey at SDN 06 PT Pejatan Timur. This foundational experience provided me with a strong base in literacy, numeracy, character building, and the essential skills needed for lifelong learning and community engagement.",
-    },
-    {
-      pendidikan: "Sekolah Menengah Pertama Negeri",
-      place: "SMPN 239 Jakarta",
-      tahun: "2015 - 2018",
-      description:
-        "Continued my foundational education at SMPN 239 Jakarta. This phase focused on expanding my understanding across a diverse range of subjects, emphasizing critical thinking, collaborative projects, and the transition from elementary concepts to more complex academic disciplines.",
+        "Completed my undergraduate degree in Information Systems. This comprehensive program rigorously covered the full software development lifecycle, providing expertise in system analysis, coding best practices (Software Development), creating intuitive user flows and interfaces (UI/UX Principles), and ensuring product reliability through effective Quality Assurance (QA) and testing methodologies.",
     },
     {
       pendidikan: "Madrasah Aliyah",
@@ -28,11 +21,18 @@ export default function Education() {
         "Completed my senior secondary education at MA Nurussaadah, specializing in the Science Track (IPA). This specialization provided me with an intensive grounding in Physics, Chemistry, Biology, and Advanced Mathematics, preparing me with strong analytical skills for scientific and technical higher education.",
     },
     {
-      pendidikan: "S1 System Information",
-      place: "Bina Sarana Informatika University",
-      tahun: "2021 - 2025",
+      pendidikan: "Sekolah Menengah Pertama Negeri",
+      place: "SMPN 239 Jakarta",
+      tahun: "2015 - 2018",
       description:
-        "Completed my undergraduate degree in Information Systems. This comprehensive program rigorously covered the full software development lifecycle, providing expertise in system analysis, coding best practices (Software Development), creating intuitive user flows and interfaces (UI/UX Principles), and ensuring product reliability through effective Quality Assurance (QA) and testing methodologies.",
+        "Continued my foundational education at SMPN 239 Jakarta. This phase focused on expanding my understanding across a diverse range of subjects, emphasizing critical thinking, collaborative projects, and the transition from elementary concepts to more complex academic disciplines.",
+    },
+    {
+      pendidikan: "Sekolah Dasar Negeri",
+      place: "SDN 06 PT Pejaten Timur",
+      tahun: "2009",
+      description:
+        "Started my formal educational journey at SDN 06 PT Pejatan Timur. This foundational experience provided me with a strong base in literacy, numeracy, character building, and the essential skills needed for lifelong learning and community engagement.",
     },
   ];
 
@@ -43,8 +43,8 @@ export default function Education() {
       once: false,
       mirror: true,
 
-      offset: 40, 
-      anchorPlacement: "top-bottom", 
+      offset: 40,
+      anchorPlacement: "top-bottom",
       startEvent: "DOMContentLoaded",
     });
 
@@ -61,10 +61,10 @@ export default function Education() {
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      const sectionHeight = rect.height; 
+      const sectionHeight = rect.height;
 
-      const scrollPassed = windowHeight - rect.top; 
-      const fasterScrollDistance = (sectionHeight + windowHeight) * 0.75; 
+      const scrollPassed = windowHeight - rect.top;
+      const fasterScrollDistance = (sectionHeight + windowHeight) * 0.75;
 
       const p = Math.min(1, Math.max(0, scrollPassed / fasterScrollDistance));
 
@@ -77,16 +77,27 @@ export default function Education() {
   }, []);
 
   return (
-    <div id="Education" className="min-h-screen flex flex-col items-center">
+    <div
+      id="Education"
+      className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden pb-16"
+    >
       {/* Header */}
       <div className="text-center mb-8 px-[5%]">
-        <h2 data-aos="fade-right" className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+        <h2
+          data-aos="fade-right"
+          className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#6366f1] to-[#a855f7]"
+        >
           Education
         </h2>
 
-        <p data-aos="fade-left" className="mt-2 text-gray-400 flex items-center justify-between gap-2">
+        <p
+          className="mt-2 text-gray-400 max-w-1xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
+          data-aos="zoom-in-up"
+          data-aos-duration="800"
+        >
           <Sparkles className="w-5 h-5 text-purple-400" />
-          Delivering digital solutions that are fast, modern, and user-focused
+          Building a strong foundation in technology to deliver modern and
+          impactful digital solutions.
           <Sparkles className="w-5 h-5 text-purple-400" />
         </p>
       </div>
@@ -94,7 +105,7 @@ export default function Education() {
       {/* Journey */}
       <section
         ref={sectionRef}
-        className="min-h-screen pb-24 pt-10 flex flex-col items-center justify-start w-full" // Tambahkan w-full
+        className="min-h-screen pb-4 pt-10 flex flex-col items-center justify-start w-full" // Tambahkan w-full
       >
         <div className="relative w-full max-w-6xl px-6">
           <div
@@ -161,8 +172,9 @@ export default function Education() {
                   <p className="mt-1 text-purple-300 text-sm tracking-widest">
                     {item.tahun}
                   </p>
-                  <p>
-                    <ScrambledText
+                  <p className="text-justify break-words whitespace-normal mt-4 text-gray-300">
+                    {item.description}
+                    {/* <ScrambledText
                       className="scrambled-text-demo"
                       radius={100}
                       duration={1.2}
@@ -170,7 +182,7 @@ export default function Education() {
                       scrambleChars={":."}
                     >
                       {item.description}
-                    </ScrambledText>
+                    </ScrambledText> */}
                   </p>
                 </div>
               </div>

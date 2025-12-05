@@ -1,27 +1,38 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect, useCallback, memo } from "react"
-import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
-import { DotLottieReact } from '@lottiefiles/dotlottie-react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import ProfileCard from "../components/ProfileCard"
+import React, { useState, useEffect, useCallback, memo } from "react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Instagram,
+  Sparkles,
+} from "lucide-react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ProfileCard from "../components/ProfileCard";
 import {
   SiReact,
   SiJavascript,
   SiNodedotjs,
   SiTailwindcss,
   SiLaravel,
-  SiPhp
+  SiPhp,
 } from "react-icons/si";
 
 // Memoized Components
 const StatusBadge = memo(() => (
-  <div className="inline-block animate-float pt-20 lg:pt-0 lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
+  <div
+    className="inline-block animate-float pt-20 lg:pt-0 lg:mx-0"
+    data-aos="zoom-in"
+    data-aos-delay="400"
+  >
     <div className="relative group">
       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#6366f1] to-[#a855f7] rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
       <div className="relative px-3 sm:px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10">
-        <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
+        <span className="bg-gradient-to-r from-white/70 to-white text-transparent bg-clip-text sm:text-sm text-[0.7rem] font-medium flex items-center">
           <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400" />
           Ready to Innovate
         </span>
@@ -37,10 +48,12 @@ const MainTitle = memo(({ textJob, isLoadedJob }) => (
     data-aos-delay="600"
   >
     <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
-
       {/* Wrapper fleksibel */}
-      <div className={`flex flex-col md:flex-row :item-start lg:items-center justify-center gap-3 md:gap-4 relative z-10 transition-all duration-1000 ${isLoadedJob ? "opacity-100" : "opacity-0"}`}>
-
+      <div
+        className={`flex flex-col md:flex-row :item-start lg:items-center justify-center gap-3 md:gap-4 relative z-10 transition-all duration-1000 ${
+          isLoadedJob ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {/* KATA PERTAMA (textJob) */}
         <span className="relative inline-block min-h-[1em] leading-none">
           <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
@@ -56,12 +69,10 @@ const MainTitle = memo(({ textJob, isLoadedJob }) => (
             Developer
           </span>
         </span>
-
       </div>
     </h1>
   </div>
 ));
-
 
 const TechStack = memo(({ tech, icon: Icon }) => (
   <div
@@ -97,7 +108,7 @@ const TechStack = memo(({ tech, icon: Icon }) => (
         className="
           text-purple-300
           transition-all duration-500 ease-out
-          mr-2
+          mx-2 
           hover:scale-110
           hover:translate-y-1
           hover:text-indigo-500
@@ -112,8 +123,6 @@ const TechStack = memo(({ tech, icon: Icon }) => (
   </div>
 ));
 
-
-
 const CTAButton = memo(({ href, text, icon: Icon }) => (
   <a href={href}>
     <button className="group relative lg:w-[160px] w-full lg:px-0 px-4">
@@ -124,7 +133,13 @@ const CTAButton = memo(({ href, text, icon: Icon }) => (
           <span className="bg-gradient-to-r from-gray-200 to-white bg-clip-text text-transparent font-medium z-10">
             {text}
           </span>
-          <Icon className={`w-4 h-4 text-gray-200 ${text === 'Education' ? 'group-hover:translate-x-1' : 'group-hover:rotate-45'} transform transition-all duration-300 z-10`} />
+          <Icon
+            className={`w-4 h-4 text-gray-200 ${
+              text === "Education"
+                ? "group-hover:translate-x-1"
+                : "group-hover:rotate-45"
+            } transform transition-all duration-300 z-10`}
+          />
         </span>
       </div>
     </button>
@@ -149,9 +164,16 @@ const PAUSE_DURATION = 2000;
 const TYPING_SPEED_JOB = 200;
 const ERASING_SPEED_JOB = 100;
 const PAUSE_DURATION_JOB = 3000;
-const JOBS = ["Frontend", "Backend", "Fullstack"];
+const JOBS = ["Fullstack"];
 const WORDS = ["Engineering & Informatics", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind", "Laravel", "PHP"];
+const TECH_STACK = [
+  "React",
+  "Javascript",
+  "Node.js",
+  "Tailwind",
+  "Laravel",
+  "PHP",
+];
 const TECH_ICONS = {
   React: SiReact,
   Javascript: SiJavascript,
@@ -163,17 +185,20 @@ const TECH_ICONS = {
 
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/thoriqarr21/" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/muhammad-thoriq-ar-rasyid-6354642b6/" },
-  { icon: Instagram, link: "https://www.instagram.com/fathi_rhs/" }
+  {
+    icon: Linkedin,
+    link: "https://www.linkedin.com/in/muhammad-thoriq-ar-rasyid-6354642b6/",
+  },
+  // { icon: Instagram, link: "https://www.instagram.com/fathi_rhs/" },
 ];
 
 const Home = () => {
-  const [text, setText] = useState("")
-  const [isTyping, setIsTyping] = useState(true)
-  const [wordIndex, setWordIndex] = useState(0)
-  const [charIndex, setCharIndex] = useState(0)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isHovering, setIsHovering] = useState(false)
+  const [text, setText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const [wordIndex, setWordIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
 
   // Optimize AOS initialization
   useEffect(() => {
@@ -181,13 +206,12 @@ const Home = () => {
       AOS.init({
         once: true,
         offset: 10,
-       
       });
     };
 
     initAOS();
-    window.addEventListener('resize', initAOS);
-    return () => window.removeEventListener('resize', initAOS);
+    window.addEventListener("resize", initAOS);
+    return () => window.removeEventListener("resize", initAOS);
   }, []);
 
   useEffect(() => {
@@ -199,17 +223,17 @@ const Home = () => {
   const handleTyping = useCallback(() => {
     if (isTyping) {
       if (charIndex < WORDS[wordIndex].length) {
-        setText(prev => prev + WORDS[wordIndex][charIndex]);
-        setCharIndex(prev => prev + 1);
+        setText((prev) => prev + WORDS[wordIndex][charIndex]);
+        setCharIndex((prev) => prev + 1);
       } else {
         setTimeout(() => setIsTyping(false), PAUSE_DURATION);
       }
     } else {
       if (charIndex > 0) {
-        setText(prev => prev.slice(0, -1));
-        setCharIndex(prev => prev - 1);
+        setText((prev) => prev.slice(0, -1));
+        setCharIndex((prev) => prev - 1);
       } else {
-        setWordIndex(prev => (prev + 1) % WORDS.length);
+        setWordIndex((prev) => (prev + 1) % WORDS.length);
         setIsTyping(true);
       }
     }
@@ -224,43 +248,29 @@ const Home = () => {
   }, [handleTyping]);
 
   // TYPE JOBS //
-  const [textJob, setTextJob] = useState("")
-  const [isTypingJob, setIsTypingJob] = useState(true)
-  const [wordIndexJob, setWordIndexJob] = useState(0)
-  const [charIndexJob, setCharIndexJob] = useState(0)
-  const [isLoadedJob, setIsLoadedJob] = useState(false)
+  const [textJob, setTextJob] = useState("");
+  const [charIndexJob, setCharIndexJob] = useState(0);
+  const [isLoadedJob, setIsLoadedJob] = useState(false);
 
-  useEffect (() => {
+  useEffect(() => {
     setIsLoadedJob(true);
     return () => setIsLoadedJob(false);
   }, []);
 
-  const hendleTypingJob = useCallback (() => {
-    if (isTypingJob) {
-      if (charIndexJob < JOBS[wordIndexJob].length) {
-        setTextJob(prev => prev + JOBS[wordIndexJob][charIndexJob]);
-        setCharIndexJob(prev => prev + 1);
-      } else {
-        setTimeout(() => setIsTypingJob(false), PAUSE_DURATION_JOB);
-      }
-    } else {
-      if (charIndexJob > 0) {
-        setTextJob(prev => prev.slice(0, -1));
-        setCharIndexJob(prev => prev - 1);
-      } else {
-        setWordIndexJob(prev => (prev + 1) % JOBS.length);
-        setIsTypingJob(true);
-      }
-    }
-  }, [charIndexJob, isTypingJob, wordIndexJob]);
+  useEffect(() => {
+    if (!isLoadedJob) return;
 
-  useEffect (() => {
-    const timeout = setTimeout(
-      hendleTypingJob,
-      isTypingJob ? TYPING_SPEED_JOB : ERASING_SPEED_JOB
-    );
-    return () => clearTimeout(timeout);
-  }, [hendleTypingJob]);
+    const currentWord = JOBS[0]; // hanya ambil kata pertama
+
+    if (charIndexJob < currentWord.length) {
+      const timeout = setTimeout(() => {
+        setTextJob((prev) => prev + currentWord[charIndexJob]);
+        setCharIndexJob((prev) => prev + 1);
+      }, TYPING_SPEED_JOB);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndexJob, isLoadedJob]);
 
   // Lottie configuration
   const lottieOptions = {
@@ -268,32 +278,45 @@ const Home = () => {
     loop: true,
     autoplay: true,
     rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
+      preserveAspectRatio: "xMidYMid slice",
       progressiveLoad: true,
     },
     style: { width: "100%", height: "100%" },
     className: `w-full h-full transition-all duration-500 ${
-      isHovering 
-        ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2" 
+      isHovering
+        ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
         : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
-    }`
+    }`,
   };
 
   return (
-    <div className="pt-16 lg:pt-0 bg-[#030014] overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] " id="Home">
-      <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+    <div
+      className="pt-16 lg:pt-0 bg-[#030014] overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] "
+      id="Home"
+    >
+      <div
+        className={`relative z-10 transition-all duration-1000 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div className="container mx-auto pt-0 lg:pt-32 pb-20">
           <div className="items-center justify-items-center">
             {/* Left Column */}
-            <div className="w-full space-y-6 sm:space-y-8 text-left lg:text-left order-1 lg:order-1 lg:mt-0"
+            <div
+              className="w-full space-y-6 sm:space-y-8 text-left lg:text-left order-1 lg:order-1 lg:mt-0"
               data-aos="fade-right"
-              data-aos-delay="200">
+              data-aos-delay="200"
+            >
               <div className="space-y-4 sm:space-y-6">
                 <StatusBadge />
                 <MainTitle textJob={textJob} isLoadedJob={isLoadedJob} />
 
                 {/* Typing Effect */}
-                <div className="h-8 flex items-start lg:items-center justify-start lg:justify-center" data-aos="fade-up" data-aos-delay="800">
+                <div
+                  className="h-8 flex items-start lg:items-center justify-start lg:justify-center"
+                  data-aos="fade-up"
+                  data-aos-delay="800"
+                >
                   <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent font-light">
                     {text}
                   </span>
@@ -301,32 +324,46 @@ const Home = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed lg:justify-self-center lg:text-center font-light"
+                <p
+                  className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed lg:justify-self-center lg:text-center font-light"
                   data-aos="fade-up"
-                  data-aos-delay="1000">
-              
-                  Creating Innovative, Functional, and User-Friendly Websites for Digital Solutions.
+                  data-aos-delay="1000"
+                >
+                  Creating Innovative, Functional, and User-Friendly Websites
+                  for Digital Solutions.
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-3 justify-start lg:justify-center" data-aos="fade-up" data-aos-delay="1200">
-                 {TECH_STACK.map((tech) => (
-                    <TechStack 
-                    key={tech} 
-                    tech={tech} 
-                    icon={TECH_ICONS[tech]} 
-                  />
-                ))}
+                <div
+                  className="flex flex-wrap gap-3 justify-start lg:justify-center"
+                  data-aos="fade-up"
+                  data-aos-delay="1200"
+                >
+                  {TECH_STACK.map((tech) => (
+                    <TechStack key={tech} tech={tech} icon={TECH_ICONS[tech]} />
+                  ))}
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col lg:flex-row gap-3 w-full justify-center" data-aos="fade-up" data-aos-delay="1400">
-                  <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
+                <div
+                  className="flex flex-col lg:flex-row gap-3 w-full justify-center"
+                  data-aos="fade-up"
+                  data-aos-delay="1400"
+                >
+                  <CTAButton
+                    href="#Portofolio"
+                    text="Projects"
+                    icon={ExternalLink}
+                  />
                   <CTAButton href="#Education" text="Educaton" icon={Mail} />
                 </div>
 
                 {/* Social Links */}
-                <div className="hidden sm:flex gap-4 justify-center" data-aos="fade-up" data-aos-delay="1600">
+                <div
+                  className="hidden sm:flex gap-4 justify-center"
+                  data-aos="fade-up"
+                  data-aos-delay="1600"
+                >
                   {SOCIAL_LINKS.map((social, index) => (
                     <SocialLink key={index} {...social} />
                   ))}
